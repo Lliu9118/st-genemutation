@@ -99,7 +99,7 @@ with st.container():
 
 
     if option =="ACC" and option2 == 'Asian' and color ==26: 
- st.write(alt.Chart(data1ACC26).mark_bar().encode( 
+ st.write(alt.Chart(data1ACC26).mark_bar().encode(
            x=alt.X('Gene', sort=None),
         y='Asian_p', 
         )   
