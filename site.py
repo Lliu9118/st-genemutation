@@ -4454,7 +4454,7 @@ with st.container():
   
     option = st.selectbox(
         'Which cancer type would ypu like to view?',
-        ('THYM', 'UCEC'))
+        ('THYM', 'UCEC', 'UCS', 'UVM', 'ACC', 'BLCA', 'BRCA', 'CESC', 'CHOL', 'COAD', 'DLBC', 'ESCA', 'GBM', 'HNSC', 'KICH', 'KIRC', 'KIRP', 'LAML', 'LGG', 'LIHC', 'LUAD', 'LUSC', 'MESO', 'OV', 'PAAD', 'PCPG', 'PRAD', 'READ', 'SARC', 'SKCM', 'STAD', 'TGCT', 'THCA',))
     st.write('You selected:', option)
     option2 = st.selectbox(
         'Which race would you like to view?',
