@@ -4454,11 +4454,11 @@ with st.container():
   
     option = st.selectbox(
         'Which cancer type would ypu like to view?',
-        ('THYM', 'UCEC', 'UCS', 'UVM', 'ACC', 'BLCA', 'BRCA', 'CESC', 'CHOL', 'COAD', 'DLBC', 'ESCA', 'GBM', 'HNSC', 'KICH', 'KIRC', 'KIRP', 'LAML', 'LGG', 'LIHC', 'LUAD', 'LUSC', 'MESO', 'OV', 'PAAD', 'PCPG', 'PRAD', 'READ', 'SARC', 'SKCM', 'STAD', 'TGCT', 'THCA',))
+        ('THYM', 'UCEC'))
     st.write('You selected:', option)
     option2 = st.selectbox(
         'Which race would you like to view?',
-        ('Asian', 'White', 'Asian and white', 'Black',))
+        ('Asian', 'White', 'Black',))
     st.write('You selected:', option2)
     color = st.select_slider(
         'Select the amount of genes you would like to view.',
