@@ -4434,10 +4434,16 @@ datab13 = pd.DataFrame({'Gene': ["	MIR4771-1	",
 datab14 = pd.DataFrame({'Gene': ["	MIR4771-1	",	
 		], 'Black_p': [	
 	1	,	],})
-
 with st.container():
     st.title("The Gene Mutation Interactive Tool")
+    #st.subheader("Helping to go further in studies on race and cancer")
 with st.container():
+    #st.download_button(
+        #label="Download data as CSV",
+    #data=csv,
+    #file_name='miRNA_outputs.csv',
+    #mime='text/csv',
+         #)
     with st.container():
         st.write("---")
     left_column, right_column = st.columns(2)
@@ -4445,18 +4451,21 @@ with st.container():
         st.header("Our Goal")
         st.write("##")
         st.write("In past research on the correlation between race and the frequency of cancer within those races, researchers lacked an efficient and simple way to gain access to the most prevalent cancerous genes by race. Our interactive tool strives to assist the further research on the topic of cancer and race. With a few clicks, researchers of the future will be able to easily gain access to the most prevalent genes within affected patients.")
-
+  
     option = st.selectbox(
         'Which cancer type would ypu like to view?',
         ('THYM', 'UCEC', 'UCS', 'UVM', 'ACC', 'BLCA', 'BRCA', 'CESC', 'CHOL', 'COAD', 'DLBC', 'ESCA', 'GBM', 'HNSC', 'KICH', 'KIRC', 'KIRP', 'LAML', 'LGG', 'LIHC', 'LUAD', 'LUSC', 'MESO', 'OV', 'PAAD', 'PCPG', 'PRAD', 'READ', 'SARC', 'SKCM', 'STAD', 'TGCT', 'THCA',))
     st.write('You selected:', option)
     option2 = st.selectbox(
         'Which race would you like to view?',
-        ('Asian', 'White', 'Black',))
+        ('Asian', 'White', 'Asian and white', 'Black',))
+    st.write('You selected:', option2)
     color = st.select_slider(
         'Select the amount of genes you would like to view.',
         options=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'])
+    
     st.write('You have selected', color, 'gene(s).')
+
 
     if option == 'LUAD' and option2 == 'Asian' and color == '0':
         st.write(data27)
