@@ -223,7 +223,7 @@ if option =="ACC" and option2 == 'Asian' and color ==2:
            y='Asian_p', 
         ))
 if option =="ACC" and option2 == 'Asian' and color ==1:
-        st.write(alt.Chart(data1ACC1).mark_bar().encode(
+        st.write(alt.Chart(data26ACC1).mark_bar().encode(
            x=alt.X('Gene', sort=None),
            y='Asian_p', 
         ))
